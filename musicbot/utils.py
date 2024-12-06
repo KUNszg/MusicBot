@@ -532,7 +532,7 @@ def is_empty_voice_channel(  # pylint: disable=dangerous-default-value
     voice_channel: Union["VoiceChannel", "StageChannel", None],
     *,
     exclude_me: bool = True,
-    exclude_deaf: bool = True,
+    exclude_deaf: bool = False,
     include_bots: Set[int] = set(),
 ) -> bool:
     """
