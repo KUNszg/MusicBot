@@ -47,7 +47,7 @@ ytdl_format_options_immutable = MappingProxyType(
         "restrictfilenames": True,
         "noplaylist": True,
         "nocheckcertificate": True,
-        "ignoreerrors": True,
+        "ignoreerrors": False,
         "logtostderr": False,
         "quiet": True,
         "no_warnings": True,
