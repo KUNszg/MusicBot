@@ -52,12 +52,12 @@ ytdl_format_options_immutable = MappingProxyType(
         "quiet": True,
         "no_warnings": True,
         # extract_flat speeds up extract_info by only listing playlist entries rather than extracting them as well.
-        "extract_flat": False,
+        "extract_flat": "in_playlist",
         "default_search": "auto",
         "source_address": "0.0.0.0",
         "usenetrc": True,
         "no_color": True,
-        "match_filter": lambda info_dict: None if info_dict.get('playlist_count') is None else 'Skipping playlists'
+        "match_filter": lambda info_dict: None if not info_dict.get('is_playlist') else 'Skipping playlists'
     }
 )
 
