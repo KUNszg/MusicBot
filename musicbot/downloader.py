@@ -57,6 +57,7 @@ ytdl_format_options_immutable = MappingProxyType(
         "source_address": "0.0.0.0",
         "usenetrc": True,
         "no_color": True,
+        "match_filter": lambda info_dict: None if not info_dict.get('is_playlist') else 'Skipping playlists'
     }
 )
 
