@@ -611,7 +611,7 @@ class URLPlaylistEntry(BasePlaylistEntry):
             input_file,
             "-af",
             "loudnorm=I=-24.0:LRA=7.0:TP=-2.0:linear=true:print_format=json",
-            "-f",
+            "-S vcodec:h264,res:720,acodec:aac",
             "null",
             "/dev/null",
             "-hide_banner",
